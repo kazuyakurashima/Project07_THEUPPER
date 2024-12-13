@@ -1,0 +1,87 @@
+/*
+VARIABLES
+================================================ */
+/* variables:変数。色やフォントを一括で定義 */
+:root {
+    --primary-font: 'Kosugi', sans-serif;
+    --background-color: #e0f7ff;
+    --header-color: #f0f4f4f8;
+    --header-title-color:#424de7;
+    --text-color:#1a1a1a;
+    --button-color:#007bff;
+    --button-hover-color:#0056b3;
+    --border-radius:10px;
+}
+
+/*
+GLOBAL STYLES
+================================================ */
+/* 全体に適用するスタイル */
+body {
+    font-family: var(--primary-font);
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+h1,h2,h3,h4,h5,h6 {
+    color:var(--text-color);
+    text-align:center;
+}
+
+/*
+SECTION STYLES
+================================================ */
+.header {
+    background-color: var(--header-color);
+    padding: 10px 20px;
+}
+.header-content {
+    display:flex;
+    align-items:center;
+}
+.header-icon {
+    margin-right:10px;
+    width:60px;
+    height:60px;
+}
+.header-title {
+    color:var(--header-title-color);
+}
+
+#generateContainer {
+    display:flex;
+    gap: 10px;   
+    /* ボタンとアドバイスの隙間gapを空けた */
+}
+
+#addBtn {
+    height:50px;
+    padding:0 12px;
+    margin-top: 20px;
+    border-radius:var(--border-radius);
+    border: none;
+    background-color: var(--button-color);
+    font-size: 16px;
+    color:#fff;
+    cursor:pointer;
+    transition: background-color 0.3s;
+}
+
+/* クリック感を出しますよ */
+#addBtn:active {
+    transform: scale(0.95);
+}
+
+/* フーバーの時に色を濃くしてます */
+#addBtn:hover {
+    background-color: var(--button-hover-color);
+}
+
+#display {
+    margin-top:20px;
+    font-size: 30px;
+    padding:0 20px;
+    max-width: auto ;
+    color: #424de7;
+
+}
